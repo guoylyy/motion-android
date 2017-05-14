@@ -49,7 +49,7 @@ public enum Api {
         service = retrofit.create(ApiService.class);
     }
 
-    public static ApiService get(Api api) {
-        return api.service;
+    public ApiService get() {
+        return INSTANCE.service;
     }
 }

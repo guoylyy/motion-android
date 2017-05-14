@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Observable<BaseEntity> observable = Api.get(Api.INSTANCE).jsSdkAuth();
+        Observable<BaseEntity> observable = Api.INSTANCE.get().jsSdkAuth();
         observable.compose(BaseSchedulers.compose()).subscribe(new BaseObserver() {
 
         });
